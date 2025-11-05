@@ -10,7 +10,6 @@ pipeline {
                 }
             }
             steps {
-
                 sh '''
                     ls -la
                     node --version
@@ -20,6 +19,14 @@ pipeline {
                     ls -la
                 '''
             }
+        }
+        stage('Test') {
+            steps {
+                sh '''
+                    echo "Test stage"
+                '''
+            }
+
         }
     }
 }
